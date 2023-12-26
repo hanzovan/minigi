@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- React library -->
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="{% static 'games/bootstrap.css' %}">
+        <script src="{% static 'games/bootstrap.js' %}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'games/styles.css' %}">
+
+        {% block script %}{% endblock %}
+        {% block script2 %}{% endblock %}
+    </head>
+    <body>
+        <main>{% block main %}{% endblock %}</main>
+        <footer class="text-center">
+            &#169;Hanzovan
+        </footer>
+    </body>
+</html>
